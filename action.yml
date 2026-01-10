@@ -228,11 +228,14 @@ inputs:
     default: true
 outputs:
   checks-failed:
-    description: An integer that can be used as a boolean value to indicate if any checks failed by clang-tidy and clang-format.
+    description: "An integer that can be used as a boolean value to indicate if any checks failed by clang-tidy (any severity level) and clang-format."
     value: ${{ steps.cpp-linter.outputs.checks-failed }}
   clang-tidy-checks-failed:
-    description: An integer that can be used as a boolean value to indicate if any checks failed by clang-tidy only.
+    description: "An integer that can be used as a boolean value to indicate if any checks failed by clang-tidy only (any severity level)."
     value: ${{ steps.cpp-linter.outputs.clang-tidy-checks-failed }}
+  clang-tidy-checks-failed-errors:
+    description: "An integer that can be used as a boolean value to indicate if any checks failed by clang-tidy only (error or fatal severity level only)."
+    value: ${{ steps.cpp-linter.outputs.clang-tidy-checks-failed-errors }}
   clang-format-checks-failed:
     description: An integer that can be used as a boolean value to indicate if any checks failed by clang-format only.
     value: ${{ steps.cpp-linter.outputs.clang-format-checks-failed }}
