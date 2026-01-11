@@ -294,8 +294,8 @@ wheels = [
 
 [[package]]
 name = "cpp-linter"
-version = "0.0.0.post1.dev123"
-source = { git = "https://github.com/Open-KO/cpp-linter.git?rev=OpenKO#3ffb8c5bec79f1a54a65e5bb32d7b0e123c898f9" }
+version = "0.0.0.post1.dev124"
+source = { git = "https://github.com/Open-KO/cpp-linter.git?rev=OpenKO#1035599635ccae8d0ab235d81c87a7f17b831753" }
 dependencies = [
     { name = "pygit2", version = "1.15.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pygit2", version = "1.18.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
