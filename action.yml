@@ -18,6 +18,10 @@ inputs:
     description: The file extensions to run the action against. This is a comma-separated string.
     required: false
     default: "c,h,C,H,cpp,hpp,cc,hh,c++,h++,cxx,hxx"
+  clang-tidy-extensions:
+    description: The file extensions to analyze with clang-tidy. This is a comma-separated string.
+    required: false
+    default: "c,h,C,H,cpp,hpp,cc,hh,c++,h++,cxx,hxx"
   tidy-checks:
     description: |
       Comma-separated list of globs with optional `-` prefix.
@@ -398,6 +402,7 @@ runs:
         let args = [
           '--style=${{ inputs.style }}'
           '--extensions=${{ inputs.extensions }}'
+          '--clang-tidy-extensions=${{ inputs.clang-tidy-extensions }}'
           '--tidy-checks=${{ inputs.tidy-checks }}'
           '--repo-root=${{ inputs.repo-root }}'
           '--version=${{ inputs.version }}'
